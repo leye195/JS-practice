@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e3e3e3;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background: white;
+  border-bottom: 1px solid #b3b1b1;
+  font-weight: 800;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slick {
+  display: inline-flex;
+  align-items: center;
+  height: 40vh;
+  transition: all 0.5s ease-in-out;
+}
+
+li {
+  display: inline-flex;
+  height: 100%;
+}
+
+li img {
+  width: 20vw;
+  height: 100%;
+}
+
+.left-button-container,
+.right-button-container {
+  position: absolute;
+  height: 20vh;
+  width: 50px;
+  top: 0;
+  transform: translate3d(0px, 50%, 0px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+.left-button-container:hover,
+.right-button-container:hover {
+  opacity: 0.8;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.left-button-container {
+  left: 0;
+}
+.right-button-container {
+  right: 0;
+}
+
+.left-button,
+.right-button {
+  all: unset;
+  font-size: 1.2rem;
+}
+
+.left-button {
+  top: 50%;
+  left: 0;
+}
+
+.right-button {
+  top: 50%;
+  right: 0;
+}
