@@ -46,6 +46,7 @@ import { getMusicInfo } from "./music.js";
       type === "desktop"
         ? `${music.data.thumbnail}hqdefault.jpg`
         : `${music.data.thumbnail}mqdefault.jpg`;
+    thumbnail.alt = music.data.title;
 
     total = music.total;
   };
