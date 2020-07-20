@@ -16,7 +16,7 @@
     innerWidth = window.innerWidth;
     slickInfo.outerWidth = slick.childElementCount * innerWidth * 0.2;
     slickInfo.imgWidth = innerWidth * 0.2;
-    //console.log(slickInfo);
+    slick.style.transform = `translateX(${-current * slickInfo.imgWidth}px)`;
   };
   const handlePrev = () => {
     const { imgWidth } = slickInfo;

@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e3e3e3;
+}
+
+header,
+footer {
+  width: 100vw;
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+main {
+  min-height: 80vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 30vw;
+  height: 50vh;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 0px 9px 4px #c7c7c7;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty {
+  width: 90%;
+  margin: 0;
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+.form input,
+.form button {
+  all: unset;
+  width: 90%;
+  height: 20px;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+}
+
+.form button {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+}
+
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .form-container {
+    width: 55vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .form-container {
+    width: 80vw;
+  }
+}

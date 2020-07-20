@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formWarning</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/index.js" defer></script>
+  </head>
+  <body>
+    <header>FormWarning</header>
+    <main>
+      <section class="form-container">
+        <section class="form">
+          <div>
+            <input id="email" type="email" placeholder="Email" />
+            <p id="email-empty" class="empty hide">
+              Email is Empty or not Valid
+            </p>
+          </div>
+          <div>
+            <input id="password1" type="password" placeholder="Password" />
+            <p id="password1-empty" class="empty hide">Password is Empty</p>
+          </div>
+          <div>
+            <input
+              id="password2"
+              type="password"
+              placeholder="Verify-Password"
+            />
+
+            <p id="password2-empty" class="empty hide">Verify your Password</p>
+          </div>
+          <div>
+            <button id="submit">Confirm</button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
