@@ -1,5 +1,5 @@
 # Music Player
 
-- play, mute, next music ,prev music
-- controll progress, volumn
-- 반응형 작업
+- [x] play, mute, next music ,prev music
+- [x] controll progress, volumn
+- [x] 반응형 작업
