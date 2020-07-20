@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tube Music</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script type="module" src="./assets/js/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h4>Tube Music</h4>
+    </header>
+    <main>
+      <section class="player-container">
+        <figure>
+          <audio></audio>
+        </figure>
+        <section class="music-image-container">
+          <img src="./assets/img/badguy.jpg" />
+        </section>
+        <section class="music-title-container">
+          <h5>Billie Eilish</h5>
+          <h3>Bad Guy</h3>
+        </section>
+        <section class="music-controller-container">
+          <div class="progress-container">
+            <p class="current time">00:00</p>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <p class="total time">02:30</p>
+          </div>
+          <div class="button-container">
+            <button id="prev">⏮</button>
+            <button id="play" class="pause">▶️</button>
+            <button id="next">⏭</button>
+            <div class="volume-container">
+              <input
+                class="volume-controll"
+                type="range"
+                min="0.0"
+                max="1.0"
+                step="0.1"
+              />
+              <button id="volume">🔈</button>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
