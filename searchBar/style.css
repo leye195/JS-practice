@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: gold;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.search-container {
+  background-color: #f9f9f9f9;
+  padding: 10px;
+  width: 100vw;
+  max-width: 60vw;
+  min-width: 30vw;
+  display: flex;
+  align-items: center;
+}
+
+.search-container input {
+  all: unset;
+  border: 1px solid #e3e3e3;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  font-size: 1.5rem;
+}
+
+.searches {
+  width: 100vw;
+  max-width: 50vw;
+  min-width: 30vw;
+  min-height: auto;
+  max-height: 500px;
+  overflow: scroll;
+}
+
+.searches.hide {
+  display: none;
+}
+
+.searches ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #f9f9f9;
+  transform: translateY(1px);
+}
+
+.searches ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  flex: 1;
+  width: 100%;
+  border-bottom: 1px solid #e3e3e3;
+  background-color: #f9f9f9;
+  font-weight: 200;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.searches ul li .hi {
+  background-color: gold;
+}
+
+.searches ul li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-5deg) translateY(3px);
+}
+
+.searches ul li:nth-child(even) {
+  transform: perspective(100px) rotateX(5deg) translateY(3px);
+}
+
+.searches ul li:last-child {
+  border-bottom: none;
+}
