@@ -10,4 +10,4 @@ Drag and Drop, Form Warning, Slick 등등 라이브러리 없이 구현해보자
 - [x] Drum kit
 - [x] clock
 - [x] numberCounterAnimation
-- [ ] Flex Panel Image Gallery
+- [x] Flex Panel Image Gallery
