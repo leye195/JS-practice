@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camera Filter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="loading">
+      <div class="item third">
+        <div class="item second">
+          <div class="item first"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <canvas class="canvas"></canvas>
+      <video class="player" hidden></video>
+      <button class="take">찰칵</button>
+      <div class="button-container">
+        <button data-type="filter" class="active">필터링</button>
+        <button data-type="photo">사진</button>
+      </div>
+      <section class="list-section">
+        <div class="filter">
+          <div class="canvas-wrapper">
+            <canvas class="normal" data-type="normal"></canvas>
+            <p data-type="normal">Normal</p>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas class="red" data-type="red"> </canvas>
+            <p data-type="red">Red</p>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas class="blue" data-type="blue"></canvas>
+            <p data-type="blue">Blue</p>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas class="green" data-type="green"></canvas>
+            <p data-type="green">Green</p>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas class="gray" data-type="gray"></canvas>
+            <p data-type="gray">Gray</p>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas class="invert" data-type="invert"></canvas>
+            <p data-type="invert">Invert</p>
+          </div>
+          <div class="canvas-wrapper">
+            <canvas class="sepia" data-type="sepia"></canvas>
+            <p data-type="sepia">Sophia</p>
+          </div>
+        </div>
+        <div class="strip hidden"></div>
+      </section>
+    </div>
+    <audio
+      class="snap"
+      src="https://raw.githubusercontent.com/wesbos/JavaScript30/master/19%20-%20Webcam%20Fun/snap.mp3"
+      hidden
+    ></audio>
+    <script src="./index.js"></script>
+  </body>
+</html>
