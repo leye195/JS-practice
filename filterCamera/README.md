@@ -5,7 +5,7 @@
 - [x] video 활용 canvas에 이미지 뿌려주기
 - [x] 찍은 사진 클릭해서 download
 
-<img src="https://im.ezgif.com/tmp/ezgif-1-98d3b0de1fe5.gif"/>
+<img src="https://user-images.githubusercontent.com/30601503/92328087-626a0800-f099-11ea-81e2-67ceb152e7a5.gif"/>
 
 ### 설치
 
