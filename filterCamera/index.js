@@ -96,8 +96,8 @@
       }
     } else if (type === "green") {
       for (let i = 0; i < pixels.data.length; i += 4) {
-        pixels.data[i + 0] = pixels.data[i + 0] - 50; //red
-        pixels.data[i + 1] = pixels.data[i + 1] + 100; //green
+        pixels.data[i + 0] = pixels.data[i + 0] - 100; //red
+        pixels.data[i + 1] = pixels.data[i + 1] - 50; //green
         pixels.data[i + 2] = pixels.data[i + 2] * 0.5; //blue
       }
     } else if (type === "gray") {
