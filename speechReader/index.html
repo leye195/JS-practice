@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
+      <section class="controller">
+        <select class="voices"></select>
+        <div class="btn-container">
+          <button id="read">Read</button>
+          <button id="stop">Stop</button>
+        </div>
+      </section>
+      <section class="textarea-wrapper">
+        <textarea
+          class="speech"
+          value="Welcome to Speech Reader"
+          placeholder="Please Write Something"
+        >
+Welcome to Speech Reader
+        </textarea>
+      </section>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>

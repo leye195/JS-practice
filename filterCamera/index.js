@@ -12,8 +12,26 @@
   const filterCanvas = document.querySelectorAll(".filter canvas");
   const fctx = Array.of(...filterCanvas).map((c) => c.getContext("2d"));
   const loading = document.querySelector(".loading");
+
+  const links = document.querySelectorAll("ul li");
+  const highlight = document.createElement("span");
+
   let mainType = "normal";
 
+  const initHighlight = () => {
+    highlight.classList.add("highlight");
+    document.body.appendChild(highlight);
+    moveHighlight(links[0].getBoundingClientRect());
+    links.forEach((link) => {
+      link.addEventListener("mouseenter", (e) => {
+        const { target } = e;
+        moveHighlight(target.getBoundingClientRect());
+      });
+    });
+  };
+  const moveHighlight = ({ width, height, top, left }) => {
+    highlight.style.cssText = `width:${width}px; height:${height}px; transform:translate(${left}px,${top}px)`;
+  };
   const getVideo = () => {
     //get Video screen
     navigator.mediaDevices
@@ -185,6 +203,7 @@
   };
   const init = () => {
     getVideo();
+    initHighlight();
     video.addEventListener("canplay", () => {
       paintToCanvas();
       loading.classList.add("done");
@@ -193,6 +212,5 @@
     take.addEventListener("click", takePhoto);
     filter.addEventListener("click", changeFilter);
   };
-
   window.addEventListener("DOMContentLoaded", init);
 })();
