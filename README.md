@@ -14,5 +14,6 @@ Drag and Drop, Form Warning, Slick 등등 라이브러리 없이 구현해보자
 - [x] Search Bar
 - [x] Filter Camera
 - [x] Speech Reader
-- [ ] Click and Drag to Scroll
+- [x] Click and Drag to Scroll
+- [x] CountDown Clock
 - [ ] Compass
