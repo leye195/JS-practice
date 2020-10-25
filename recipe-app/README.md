@@ -3,4 +3,4 @@
 - [x] recipe info 확인
 - [x] category로 분류
 
-<img src='https://user-images.githubusercontent.com/30601503/97100900-e6c12a80-16db-11eb-80cb-fe57b33f0c91.png'/>
+<img src='https://user-images.githubusercontent.com/30601503/97100954-6949ea00-16dc-11eb-9af3-683260c15b72.png'/>
