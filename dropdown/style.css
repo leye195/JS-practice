@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: content-box;
+  background-color: #e3e3e3;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container > h1 {
+  color: dodgerblue;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+  padding: 5px 20px;
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  width: 400px;
+}
+
+.select {
+  background-color: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+}
+.select button {
+  padding: 15px 10px;
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  border-radius: 10px;
+  text-align: start;
+  cursor: pointer;
+}
+
+.options {
+  position: absolute;
+  margin-top: 1rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: border-color 200ms, max-height 200ms ease-in;
+}
+
+.options.show {
+  max-height: 280px;
+  border-color: rgba(224, 226, 231, 0.5);
+  box-shadow: 0 4px 9px 0 rgba(63, 65, 80, 0.1);
+}
+
+.option {
+  cursor: pointer;
+}
+
+.options .option:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.options .option:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.option:hover {
+  background-color: #f3f3f3;
+}
+
+.option button {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: inherit;
+  border: none;
+  border-radius: 10px;
+  text-align: start;
+}
+
+.button-container {
+  margin-top: 1rem;
+  width: 400px;
+}
+
+.button-container .next-button {
+  padding: 10px;
+  width: 100%;
+  background-color: #210000;
+  color: white;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+}
+
+.button-container .next-button:disabled {
+  background-color: #e3e3e3;
+  cursor: not-allowed;
+}

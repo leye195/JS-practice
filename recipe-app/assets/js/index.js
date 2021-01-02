@@ -111,7 +111,7 @@
         strMeal,
         strMealThumb,
         strInstructions,
-        strIngredient1,
+        //strIngredient1,
       } = meals[0];
       //console.log(formatDescription(strInstructions));
       modalDOM.innerHTML = `
@@ -147,7 +147,7 @@
         .addEventListener("click", handleCloseModal);
     }
   };
-  //console.log(closeBtnDOM);
+
   const initData = () => {
     getCategoriesData();
     getFoods();
