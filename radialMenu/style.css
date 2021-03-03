@@ -1,0 +1,162 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: rgba(100, 120, 110);
+}
+
+ul,
+ol,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.radial-menu1,
+.radial-menu2 {
+  position: relative;
+  flex: 1;
+}
+
+.radial-menu1 .toggle,
+.radial-menu2 .toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #356acc;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.radial-menu1 .toggle i,
+.radial-menu2 .toggle i {
+  font-size: 25px;
+  color: #ffffff;
+  transition: 0.7s;
+}
+
+.radial-menu1 .menu {
+  background-color: #ffffff;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transform: scale(0);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 0;
+  border: 2px solid #356acc;
+  transition: 0.7s;
+}
+
+.radial-menu2 .menu {
+  background-color: transparent;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transform: scale(0);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 0;
+  transition: 0.7s;
+}
+
+.radial-menu1 .menu a {
+  display: inline-block;
+  position: absolute;
+  font-size: 8px;
+  color: #e3e3e3;
+  transition: 0.4s;
+}
+
+.radial-menu2 .menu a {
+  display: inline-block;
+  position: absolute;
+  font-size: 8px;
+  color: #e3e3e3;
+  transition: 0.4s;
+}
+
+.radial-menu2 .menu a {
+  position: absolute;
+  background-color: #356acc;
+  border-radius: 50%;
+  padding: 3px;
+  border: 0.5px solid #ffffff;
+}
+
+.radial-menu2 .menu a:first-child {
+  top: -5px;
+  left: 21px;
+}
+
+.radial-menu2 .menu a:nth-child(2) {
+  top: 5px;
+  left: 0;
+}
+
+.radial-menu2 .menu a:nth-child(3) {
+  top: 5px;
+  right: 0;
+}
+
+.radial-menu1 .menu a:first-child {
+  top: 4px;
+  left: 24px;
+}
+
+.radial-menu1 .menu a:nth-child(2) {
+  top: 15px;
+  left: 6px;
+}
+
+.radial-menu1 .menu a:nth-child(3) {
+  bottom: 15px;
+  left: 6px;
+}
+
+.radial-menu1 .menu a:nth-child(4) {
+  bottom: 4px;
+  left: 26px;
+}
+
+.radial-menu1 .menu a:nth-child(5) {
+  right: 6px;
+  bottom: 15px;
+}
+
+.radial-menu1 .menu a:last-child {
+  right: 6px;
+  top: 15px;
+}
+
+.radial-menu1 .menu a:hover {
+  color: #356acc;
+}
