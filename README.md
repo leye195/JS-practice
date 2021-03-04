@@ -20,5 +20,6 @@ Drag and Drop, Form Warning, Slick 등등 라이브러리 없이 구현해보자
 - [x] Quiz
 - [x] Recipe App
 - [x] Drop Down
-- [ ] Radial Menu
+- [x] Radial Menu
+- [x] 3D Social Icon
 - [ ] Compass
