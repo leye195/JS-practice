@@ -24,8 +24,7 @@ const handleToggle2 = () => {
     if(isTwoClosed) {
       menu2.style.transform = `scale(3)`;
       menu2.style.opcity = 1;
-      plus2.style.transform = 'rotate(45deg)';
-      
+      plus2.style.transform = 'rotate(45deg)';     
     } else {
       menu2.style.transform = `scale(0)`;
       menu2.style.opcity = 0;
@@ -33,9 +32,6 @@ const handleToggle2 = () => {
     }
     isTwoClosed = !isTwoClosed;
   }
-
-
-
 
 const init = () => {
   radial1.addEventListener('click',handleToggle1);
