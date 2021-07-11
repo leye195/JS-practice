@@ -39,8 +39,10 @@ class Component {
   }
 
   render() {
-    this.target.innerHTML = this.template();
-    this.mounted();
+    if (this.target) {
+      this.target.innerHTML = this.template();
+      this.mounted();
+    }
   }
 }
 

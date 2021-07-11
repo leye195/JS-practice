@@ -70,6 +70,10 @@ div[data-component="todo-items"] {
   font-size: 0.8rem;
 }
 
+.history {
+  cursor: pointer;
+}
+
 @keyframes loadingAnimation {
   from {
     transform: rotate(0deg);
