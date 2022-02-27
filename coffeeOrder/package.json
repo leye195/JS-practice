@@ -1,0 +1,14 @@
+{
+  "name": "coffee-order",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "serve": "^13.0.2"
+  },
+  "scripts": {
+    "start": "serve -s"
+  }
+}
