@@ -1,5 +1,35 @@
 const local = localStorage;
 
+export const debounce = (fn, delay) => {
+  let timer = null;
+  return () => {
+    if (timer) {
+      clearTimeout(timer);
+    }
+
+    timer = setTimeout(() => {
+      fn();
+    }, delay);
+  };
+};
+
+export const throttle = (fn, delay) => {
+  let timer = null;
+
+  return () => {
+    if (!timer) {
+      timer = setTimeout(() => {
+        timer = null;
+        fn();
+      }, delay);
+    }
+  };
+};
+
+export const classNames = (...classnames) => {
+  return classnames.join(" ");
+};
+
 export const getItems = (key, defaultValue) => {
   try {
     const value = local.getItem(key);
