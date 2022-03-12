@@ -24,3 +24,17 @@ export const fetchProductDetail = async (id) => {
   const product = await request(`products/${id}`);
   return product;
 };
+
+export const fetchSuggestions = async () => {
+  try {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+    if (res.ok) {
+      const json = await res.json();
+
+      return json;
+    }
+  } catch (e) {
+    console.log(e);
+    alert(e.message);
+  }
+};

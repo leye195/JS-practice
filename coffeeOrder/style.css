@@ -50,6 +50,56 @@ body {
   justify-content: space-between;
 }
 
+.SearchInput {
+  margin: 0 3rem 0 1rem;
+}
+
+.SearchInput__input {
+  padding: 0.5rem 0 0.5rem 1rem;
+  width: 100%;
+}
+
+.Suggestion {
+  display: flex;
+  width: 80%;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: white;
+  overflow-x: auto;
+}
+
+.Suggestion ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: nowrap;
+  height: 500px;
+}
+
+.Suggestion ul li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.Suggestion ul li:hover {
+  background: #40a9ff;
+  color: white;
+}
+
+.Suggestion ul li:focus {
+  background: #40a9ff;
+  color: white;
+}
+
+.SearchHistory ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.SearchHistory ul li {
+  padding: 0.5rem 1rem;
+}
+
 .ProductDetail {
   display: flex;
   flex-direction: row;
