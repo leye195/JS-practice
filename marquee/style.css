@@ -1,0 +1,65 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  --offset: 20vw;
+  --move-initial: calc(0 + var(--offset));
+  --move-final: calc(-119% + var(--offset));
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 2rem;
+  background-color: black;
+  overflow: hidden;
+}
+
+.inner-container {
+  position: relative;
+  display: flex;
+  width: 200%;
+}
+
+.inner-container div {
+  display: flex;
+  width: auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(
+    to right,
+    white,
+    rgb(21, 21, 255),
+    rgb(7, 255, 7)
+  );
+  background-size: 200%;
+  font-weight: 700;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marqueez 10s linear infinite;
+}
+
+.container p {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0;
+  white-space: pre;
+  font-weight: 700;
+}
+
+@keyframes marqueez {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}
