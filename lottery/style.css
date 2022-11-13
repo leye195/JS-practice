@@ -1,0 +1,23 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.container {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 2rem;
+}
+
+.container canvas {
+  border-radius: 2rem;
+}
