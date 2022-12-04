@@ -42,6 +42,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpg)$/i,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+            },
+          },
+        ],
+      },
+      {
         test: /\.js$/i,
         use: [
           {

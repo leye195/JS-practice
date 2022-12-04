@@ -32,7 +32,7 @@ class App {
 
     //원근 카메라 생성
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 100);
-    camera.position.z = 4;
+    camera.position.z = 7;
     this._camera = camera;
   }
 
@@ -48,7 +48,59 @@ class App {
   }
 
   _setupModel() {
-    /*const material = new THREE.MeshLambertMaterial({
+    /*const material = new THREE.MeshPhysicalMaterial({
+      color: 0x0f9fff,
+      emissive: 0x000000,
+      roughness: 1,
+      metalness: 0,
+      clearcoat: 1,
+      clearcoatRoughness: 0,
+      wireframe: false,
+      flatShading: false,
+    });*/
+
+    const textureLoader = new THREE.TextureLoader();
+    const map = textureLoader.load(
+      "https://images.unsplash.com/photo-1546453667-8a8d2d07bc20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80 387w, https://images.unsplash.com/photo-1546453667-8a8d2d07bc20?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80 687w",
+      (texture) => {
+        // repeat는 wrapS와 wrapT과 함께 사용할수 있음
+        texture.repeat.x = 1;
+        texture.repeat.y = 1;
+
+        // x,y축 방향으로
+        texture.wrapS = THREE.ClampToEdgeWrapping; // THREE.RepeatWrapping;
+        texture.wrapT = THREE.ClampToEdgeWrapping; // THREE.RepeatWrapping;
+
+        // uv좌표의 시작 위치를 조정
+        texture.offset.x = 0;
+        texture.offset.y = 0;
+
+        texture.rotation = THREE.MathUtils.degToRad(0);
+        texture.center.x = 0.5;
+        texture.center.y = 0.5;
+
+        texture.magFilter = THREE.NearestFilter;
+        texture.minFilter = THREE.NearestMipmapNearestFilter;
+      }
+    );
+    const material = new THREE.MeshStandardMaterial({
+      map,
+    });
+
+    const box = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), material);
+    box.position.set(0, 0, 0);
+    this._scene.add(box);
+
+    const sphere = new THREE.Mesh(
+      new THREE.SphereGeometry(0.5, 32, 32),
+      material
+    );
+    sphere.position.set(1, 0, 0);
+    this._scene.add(sphere);
+  }
+
+  _setupMeshModel() {
+    /* const material = new THREE.MeshLambertMaterial({
       color: 0x223093,
       emissive: "0x555500", // 재질 자체에서 방출하는 색상 값
       wireframe: false, // 선으로 표현할지 여부
