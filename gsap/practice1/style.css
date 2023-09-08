@@ -2,6 +2,7 @@
   --black: black;
   --white: white;
   --box-color: #fc1280;
+  --red: rgb(248, 99, 99);
   --green: rgb(37, 177, 37);
   --blue: rgb(91, 91, 224);
 }
@@ -12,6 +13,20 @@ body {
   margin: 0;
   min-height: 100vh;
   background-color: var(--white);
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .grid {
@@ -77,10 +92,68 @@ body {
   border-radius: 30px;
 }
 
-.box {
+.w-4 {
+  width: 4px;
+}
+
+.w-8 {
+  width: 8px;
+}
+
+.w-10 {
+  width: 10px;
+}
+
+.w-20 {
+  width: 20px;
+}
+
+.w-40 {
+  width: 40px;
+}
+
+.w-80 {
   width: 80px;
+}
+
+.h-4 {
   height: 4px;
+}
+
+.h-8 {
+  height: 8px;
+}
+
+.h-10 {
+  height: 10px;
+}
+
+.h-20 {
+  height: 20px;
+}
+
+.h-40 {
+  height: 40px;
+}
+
+.h-80 {
+  height: 80px;
+}
+
+.box {
   background-color: var(--box-color);
+}
+
+.section2 {
+  width: 300%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 .gap-4 {
@@ -104,9 +177,14 @@ h2 {
   opacity: 0;
 }
 
+h3 {
+  font-size: 2.25rem;
+}
+
 .panel {
   width: 100%;
   height: 100vh;
+  top: 0;
 }
 
 .panel span {
@@ -123,4 +201,43 @@ h2 {
 
 .bg-green {
   background-color: var(--green);
+}
+
+.bg-red {
+  background-color: var(--red);
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.pin-section {
+  overflow: hidden;
+}
+
+.pin-spacer {
+  padding: 0 !important;
+}
+
+.panels-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 300%;
+  flex-wrap: nowrap;
+  overscroll-behavior: none;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.wrapper.text {
+  font-size: clamp(8rem, 15vw, 16rem);
+  font-weight: 900;
 }
