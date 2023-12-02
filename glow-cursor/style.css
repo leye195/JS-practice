@@ -1,0 +1,91 @@
+* {
+  box-sizing: content-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.card__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.card__wrapper li {
+  background: rgba(131, 115, 82, 0.1);
+  border-radius: 8px;
+  padding: 1px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: inherit;
+  min-width: 100px;
+  aspect-ratio: 1/1;
+  position: relative;
+  background: white;
+  padding: 1rem;
+  transition: background 0.1s;
+  isolation: isolate;
+  contain: strict;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  transition: opacity 500ms;
+}
+
+.card__wrapper:hover .card::before,
+.card__wrapper:hover .card::after {
+  opacity: 1;
+}
+
+.card::after {
+  background: radial-gradient(
+    600px circle at calc(var(--x) * 1px) calc(var(--y) * 1px),
+    rgba(231, 231, 231, 0.1),
+    transparent 40%
+  );
+}
+
+.card::before {
+  background: radial-gradient(
+    300px circle at calc(var(--x) * 1px) calc(var(--y) * 1px),
+    rgba(231, 231, 231, 0.3),
+    transparent 40%
+  );
+}
